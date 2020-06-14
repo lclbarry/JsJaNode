@@ -1,0 +1,10 @@
+var path = require('path');
+var a = '/node/public/index.html';
+var b = path.basename(a);
+console.log(b);
+var c = path.extname(a);
+console.log(c);
+var d = path.dirname(a);
+console.log(d);
+var e = path.basename(a, path.extname(a));
+console.log(e);

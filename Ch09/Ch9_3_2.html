@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Ch9_3_2.html</title>
+<style type="text/css">
+.line { border: 1px solid #333; }
+</style>
+<script src="jquery-3.2.1.min.js"></script>
+<script>
+$(document).ready(function() {
+   $('ol li:first').addClass('line');
+   $('ol li:last').addClass('line');
+});
+</script>
+</head>
+<body>
+<ol id="list">
+  <li>jQuery</li>
+  <li class='item'>Prototype</li>
+  <li>MooTools</li>
+  <li class='item'>DOJO</li> 
+</ol>
+</body>
+</html>

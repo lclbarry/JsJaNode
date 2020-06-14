@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Ch9_3_3.html</title>
+<style type="text/css">
+.hide { display: none; }
+.line { border: 1px solid #333; }
+</style>
+<script src="jquery-3.2.1.min.js"></script>
+<script>
+$(document).ready(function() {
+   $('.header:has(p)').addClass('line');
+   $('.error:empty)').addClass('hide');
+});
+</script>
+</head>
+<body>
+<div>
+  <div class="header">
+    <p>JavaScript網頁設計</p>    
+  </div>
+  <div class="header">
+    <span>jQuery網頁設計</span>
+  </div>
+  <div class="header">
+    <span><p>Google Chrome<p></span>
+  </div>
+  <div class="error"></div>
+  <div class="error">顯示錯誤訊息...</div>
+</div>
+</body>
+</html>

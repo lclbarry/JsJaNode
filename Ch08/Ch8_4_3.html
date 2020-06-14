@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Ch8_4_3.html</title>
+<style type="text/css">
+.zebra {
+   background-color: #CCBB66;   
+}
+</style>
+<script src="jquery-3.2.1.min.js"></script>
+<script>
+$(document).ready(function() {
+   $('table tr:nth-child(even)').addClass('zebra');
+});
+</script>
+</head>
+<body>
+<script>
+var x = 2;
+var y = 3;
+console.log("變數x = " + x + " / 變數y" + y);
+console.warn("變數x < 5");
+console.assert(x != y, "變數x和變數y不相等!");
+y = 2;
+console.assert(x != y, "變數x和變數y不相等!");
+</script>
+<table border="1">
+<tr>
+   <td>JavaScript</td>
+   <td>Dynamic HTML</td>
+   <td>Ajax</td>
+</tr>
+<tr>
+   <td>JSP</td>
+   <td>PHP</td>
+   <td>Java Applete</td>
+</tr>
+<tr>
+   <td>VBScript</td>
+   <td>ASP</td>
+   <td>Java Servlet</td>
+</tr>
+<tr>
+   <td>ASP.NET</td>
+   <td>ActionScript</td>
+   <td>Flash</td>
+</tr>
+</table>
+</body>
+</html>

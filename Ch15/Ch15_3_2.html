@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Ch15_3_2.html</title>
+<script src="jquery-3.2.1.min.js"></script>
+<script>
+$(document).ready(function () {
+    (function () {
+        var clickCount = 0;
+        $('#mybutton').bind('click', function () {
+            clickCount = clickCount + 1;
+            $('#result').html(clickCount);
+        });
+    } ());
+});
+</script>
+</head>
+<body>
+<button id="mybutton">按一下</button>
+<div id="result"></div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Ch4_1_5.html</title>
+<script>
+// number和boolean參數為傳值
+function funcA(c, b){
+   c++;
+   b = false;
+   document.write("在funcA為 :"+c+"/"+b+"<br/>");
+}
+// object為傳址和字串參數為傳值
+function funcB(objA, a){
+   objA.name = "江小魚";
+   a = "陳允傑";
+   document.write("在funcB為 : "+objA.name+"/"+a+"<br/>");
+}
+</script>
+</head>
+<body>
+<h2>測試傳值和傳址的函數呼叫</h2>
+<hr/>
+<script>
+// 宣告變數
+var c = 1;        // 數值
+var b = true;     // 布林
+var a = "陳會安"; // 字串
+var objA = new Object();  // 建立物件實例
+objA.name = "陳會安";
+document.write("呼叫funcA前 : "+c+"/"+b+"<br/>");
+funcA(c,b);  // 呼叫函數
+document.write("呼叫funcA後 : "+c+"/"+b+"<br/>");
+document.write("呼叫funcB前 : "+objA.name+"/"+a+"<br/>");
+funcB(objA, a);  // 呼叫函數
+document.write("呼叫funcB後 : "+objA.name+"/"+a+"<br/>");  
+</script>
+</body>
+</html>   

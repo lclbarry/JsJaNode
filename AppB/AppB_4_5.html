@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>AppB_4_5.html</title>
+<link type="text/css" rel="stylesheet" href="jquery-ui.min.css">
+<style type="text/css">
+label { display: block; }
+</style>
+<script src="jquery-3.2.1.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script>
+var terms = [
+    "ASP", "ASP.NET", "Java", "JavaScript", 
+    "PHP", "JSP", "jQuery", "HTML"
+    ];
+$(document).ready(function() {
+   $('#search').autocomplete({ source: terms});
+   $('#datepicker').datepicker();  
+});
+</script>
+</head>
+<body>
+<div>
+<label>輸入關鍵字 : </label>
+<input type="text" id="search"/>
+</div>
+<div>
+<label>輸入生日日期 : </label>
+<input type="text" id="datepicker"/>
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Ch9_4_2.html</title>
+<style type="text/css">
+.blue { background-color: yellow; }
+.line { border: 1px solid #333; border-color: red }
+</style>
+<script src="jquery-3.2.1.min.js"></script>
+<script>
+$(document).ready(function() {
+   $('div[id^="red"]').addClass('line');
+   $('div[id$="bird"]').addClass('blue');
+});
+</script>
+</head>
+<body>
+<div id="red-pen">紅筆</div>
+<div id="blue-pen">藍筆</div>
+<div id="black-pen">黑筆</div>
+<div id="red-bird">紅鳥</div>
+<div id="blue-bird">藍鳥</div>
+</body>
+</html>

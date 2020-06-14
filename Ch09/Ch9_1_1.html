@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Ch9_1_1.html</title>
+<style type="text/css">
+.blue { color: blue; }
+.red { color: red; }
+</style>
+<script src="jquery-3.2.1.min.js"></script>
+<script>
+$(document).ready(function() {
+   $('<p>建立DOM元素</p>').appendTo('body');
+   $('p').addClass('blue');
+   $('#list').addClass('red');
+   $('.item').addClass('blue');
+});
+</script>
+</head>
+<body>
+<p>jQuery包裝者</p>
+<ol id="list">
+  <li>Java Applet</li>
+  <li class='item'>JavaScript</li>
+  <li>VBScript</li>
+  <li class='item'>DHTML</li> 
+</ol>
+</body>
+</html>

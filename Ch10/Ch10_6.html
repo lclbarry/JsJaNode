@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Ch10_6.html</title>
+<style type="text/css">
+.highline { border : 3px solid red; }
+.hidden { display: none; }
+</style> 
+<script src="jquery-3.2.1.min.js"></script>
+<script>
+$(document).ready(function() {
+   $('p').addClass('hidden');
+   $('#name').focus(function() {
+      $(this).addClass('highline');
+   }).blur(function() {
+      $(this).removeClass('highline');
+   });  
+   $('#memo').focus(function() {
+      $('p').addClass('hidden');
+   }).blur(function() {
+      var msg = $(this).val();
+      var numChar = msg.length;
+      $('#counter').text(numChar);
+      $('p').removeClass('hidden');
+   });  
+});
+</script> 
+</head>
+<body>
+姓名: <input type="text" id="name"/><hr/>
+留言:
+<textarea id="memo" cols="50" rows="5"></textarea>
+<p>字元數: <span id="counter"></span></p>
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Ch9_6_2.html</title>
+<script src="jquery-3.2.1.min.js"></script>
+<script>
+$(document).ready(function() {
+   var length;
+   length = $("li:contains('ASP')").length;
+   $('#output1').text("DOM元素個數: " + length);
+   var myTag1 = $('#list').get(0).tagName;
+   var myTag2 = $('ol, p')[1].tagName;
+   $('#output2').text("標籤名稱: " + myTag1 +
+                      "/" + myTag2);
+});
+</script>
+</head>
+<body>
+<ol id="list">
+  <li>JavaScript網頁設計</li>
+  <li>ASP.NET網頁設計</li>
+  <li>PHP網頁設計</li>
+  <li>ASP 3.0網頁設計</li>  
+</ol>
+<p>JSP網頁設計</p>
+<p>jQuery網頁設計</p>
+<div id="output1"></div>
+<div id="output2"></div>
+</body>
+</html>

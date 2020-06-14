@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Ch10_4.html</title>
+<style type="text/css">
+.large { font-size: 15pt; }
+.small { font-size: 10pt; }           
+.line { border: 1px solid #333; cursor: pointer; }
+.selected { font-weight: bold; background-color: gray; }
+.hidden { display: none; }
+.hover {
+   cursor : pointer;
+   background-color : yellow;
+}
+</style> 
+<script src="jquery-3.2.1.min.js"></script>
+<script>
+$(document).ready(function() {
+   $('span').addClass('line');
+   $('#switcher').click(function(event) {
+      if ($(event.target).is('span')) {
+         var className = event.target.id;
+         $('p').removeClass().addClass(className);
+         $('#switcher span').removeClass('selected');
+         $(event.target).addClass('selected');
+         event.stopPropagation();
+      }
+   });
+   $('#switcher h3').hover(function() {  
+      $(this).addClass('hover');
+   }, function() {
+      $(this).removeClass('hover');
+   });        
+});
+</script>
+</head>
+<body>
+<div id="switcher">
+<h3>選擇字型尺寸</h3>
+<span id="default">標準</span>
+<span id="large">放大</span>
+<span id="small">縮小</span>
+</div>
+<p>jQuery事件處理</p>
+</body>
+</html>
